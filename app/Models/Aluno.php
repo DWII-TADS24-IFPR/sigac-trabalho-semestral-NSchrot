@@ -35,4 +35,8 @@ class Aluno extends Model
     public function declaracao(){
         return $this->hasMany(Declaracao::class);
     }
+    public function horasCumpridas()
+    {
+        return $this->hasMany(\App\Models\HorasCumpridas::class);
+    }
 }

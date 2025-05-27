@@ -24,4 +24,9 @@ class Documento extends Model
     {
         return $this->belongsTo(Categoria::class);
     }
+    
+    public function horasCumpridas()
+    {
+        return $this->hasMany(\App\Models\HorasCumpridas::class);
+    }
 }

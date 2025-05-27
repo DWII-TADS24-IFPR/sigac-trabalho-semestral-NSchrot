@@ -59,4 +59,8 @@ class User extends Authenticatable
         return $this->role && $this->role->nome === $roleName;
     }
 
+    public function aluno()
+    {
+        return $this->hasOne(\App\Models\Aluno::class, 'user_id');
+    }
 }

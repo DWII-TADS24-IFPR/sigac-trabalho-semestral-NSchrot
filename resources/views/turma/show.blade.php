@@ -16,6 +16,7 @@
                         <a href="{{ route('coordenador.turmas.edit', $turma->id) }}" class="px-4 py-2 bg-yellow-600 text-white rounded hover:bg-yellow-700">Editar</a>
                         <a href="{{ route('coordenador.turmas.index') }}" class="px-4 py-2 bg-gray-400 text-white rounded hover:bg-gray-500">Voltar</a>
                     </div>
+                    <a href="{{ route('coordenador.turmas.grafico_horas', $turma->id) }}" class="inline-block px-4 py-2 bg-blue-600 text-white rounded shadow hover:bg-blue-700 transition mt-4">Ver Gráfico de Horas Cumpridas</a>
                 </div>
             </div>
         </div>

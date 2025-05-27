@@ -20,11 +20,9 @@
                         @method('PUT')
 
                         <div>
-                            <label for="url" class="block text-sm font-medium">URL</label>
-                            <input type="text" name="url" id="url" value="{{ old('url', $documento->url) }}" class="mt-1 block w-full rounded border-gray-300 dark:bg-gray-700 dark:text-gray-100">
-                            @error('url')
-                                <div class="text-danger">{{ $message }}</div>
-                            @enderror
+                            <label for="url" class="block text-sm font-medium">URL do PDF</label>
+                            <input type="text" name="url" id="url" value="{{ old('url', $documento->url) }}" class="mt-1 block w-full rounded border-gray-300 dark:bg-gray-700 dark:text-gray-100" readonly>
+                            <a href="{{ asset('storage/' . $documento->url) }}" target="_blank" class="text-blue-500 underline">Visualizar PDF</a>
                         </div>
 
                         <div>

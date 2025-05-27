@@ -12,11 +12,9 @@
                         @csrf
 
                         <div>
-                            <label for="url" class="block text-sm font-medium">URL</label>
-                            <input type="text" class="mt-1 block w-full rounded border-gray-300 dark:bg-gray-700 dark:text-gray-100" id="url" name="url" value="{{ old('url') }}" required>
-                            @error('url')
-                                <div class="text-danger">{{ $message }}</div>
-                            @enderror
+                            <label for="url" class="block text-sm font-medium">URL do PDF</label>
+                            <input type="text" name="url" id="url" value="{{ old('url') }}" class="mt-1 block w-full rounded border-gray-300 dark:bg-gray-700 dark:text-gray-100">
+                            <small class="text-gray-400">Opcional: Cole aqui a URL de um PDF já existente, se necessário.</small>
                         </div>
 
                         <div>

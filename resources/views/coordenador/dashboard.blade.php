@@ -9,7 +9,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
-                    <h3 class="mb-4">Bem-vindo(a) ao painel do Coordenador!</h3>
+                    <h2 class="text-xl font-bold mb-4">Bem-vindo de volta, {{ Auth::user()->name }}!</h2>
                     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                         <a href="{{ route('coordenador.alunos.index') }}" class="block p-4 bg-indigo-600 text-white rounded shadow hover:bg-indigo-700 transition">Gerenciar Alunos</a>
                         <a href="{{ route('coordenador.categorias.index') }}" class="block p-4 bg-indigo-600 text-white rounded shadow hover:bg-indigo-700 transition">Gerenciar Categorias</a>

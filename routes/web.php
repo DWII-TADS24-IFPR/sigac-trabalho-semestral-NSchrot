@@ -34,7 +34,9 @@ Route::get('/dashboard', function () {
 
 Route::middleware(['auth', 'verified', 'role:aluno'])->prefix('aluno')->name('aluno.')->group(function () {
     Route::get('/dashboard', [AlunoDashboardController::class, 'index'])->name('dashboard');
-
+    Route::get('/documentos/create', [\App\Http\Controllers\DocumentoController::class, 'createAluno'])->name('documentos.create');
+    Route::post('/documentos', [\App\Http\Controllers\DocumentoController::class, 'storeAluno'])->name('documentos.store');
+    Route::get('/declaracao/pdf', [\App\Http\Controllers\AlunoDeclaracaoController::class, 'gerarDeclaracao'])->name('declaracao.pdf');
 });
 
 Route::middleware(['auth', 'verified', 'role:coordenador'])->prefix('coordenador')->name('coordenador.')->group(function () {
@@ -58,6 +60,9 @@ Route::middleware(['auth', 'verified', 'role:coordenador'])->prefix('coordenador
 
     Route::put('/alunos/{aluno}', [AlunoController::class, 'update'])->name('alunos.update');
     Route::get('/turmas/get/{cursoId}', [AlunoController::class, 'getTurmasByCurso'])->name('turmas.byCurso');
+    Route::post('documentos/{documento}/aprovar', [DocumentoController::class, 'aprovar'])->name('documentos.aprovar');
+    Route::post('documentos/{documento}/reprovar', [DocumentoController::class, 'reprovar'])->name('documentos.reprovar');
+    Route::get('turmas/{turma}/grafico-horas', [TurmaController::class, 'graficoHoras'])->name('turmas.grafico_horas');
 
 });
 
