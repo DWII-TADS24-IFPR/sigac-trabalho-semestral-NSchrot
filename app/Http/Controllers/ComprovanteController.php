@@ -35,7 +35,7 @@ class ComprovanteController extends Controller
     public function store(ComprovanteRequest $request)
     {
         Comprovante::create($request->validated());
-        return redirect()->route('comprovantes.index')->with('success', 'Comprovante criado com sucesso.');
+        return redirect()->route('coordenador.comprovantes.index')->with('success', 'Comprovante criado com sucesso.');
     }
 
     /**
@@ -62,7 +62,7 @@ class ComprovanteController extends Controller
     public function update(ComprovanteRequest $request, Comprovante $comprovante)
     {
         $comprovante->update($request->validated());
-        return redirect()->route('comprovantes.index')->with('success', 'Comprovante atualizado com sucesso.');
+        return redirect()->route('coordenador.comprovantes.index')->with('success', 'Comprovante atualizado com sucesso.');
     }
 
     /**
@@ -71,6 +71,6 @@ class ComprovanteController extends Controller
     public function destroy(Comprovante $comprovante)
     {
         $comprovante->delete();
-        return redirect()->route('comprovantes.index')->with('success', 'Comprovante deletado com successo.');
+        return redirect()->route('coordenador.comprovantes.index')->with('success', 'Comprovante deletado com successo.');
     }
 }

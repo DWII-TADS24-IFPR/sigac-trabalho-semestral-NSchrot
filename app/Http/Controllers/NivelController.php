@@ -31,7 +31,7 @@ class NivelController extends Controller
     public function store(NivelRequest $request)
     {
         Nivel::create($request->validated());
-        return redirect()->route('niveis.index')->with('success', 'Nível criado com sucesso!');
+        return redirect()->route('coordenador.niveis.index')->with('success', 'Nível criado com sucesso!');
     }
 
     /**
@@ -56,7 +56,7 @@ class NivelController extends Controller
     public function update(NivelRequest $request, Nivel $nivel)
     {
         $nivel->update($request->validated());
-        return redirect()->route('niveis.index')->with('success', 'Nível atualizado com sucesso!');
+        return redirect()->route('coordenador.niveis.index')->with('success', 'Nível atualizado com sucesso!');
     }
 
     /**
@@ -65,6 +65,6 @@ class NivelController extends Controller
     public function destroy(Nivel $nivel)
     {
         $nivel->delete();
-        return redirect()->route('niveis.index')->with('success', 'Nível excluído com sucesso!');
+        return redirect()->route('coordenador.niveis.index')->with('success', 'Nível excluído com sucesso!');
     }
 }

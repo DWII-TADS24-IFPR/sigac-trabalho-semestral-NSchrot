@@ -26,7 +26,7 @@ class CursoController extends Controller
     {
         $niveis = Nivel::all();
         $categorias = Categoria::all();
-        return view('curso.create', compact('niveis', 'categorias'));
+        return view('coordenador.curso.create', compact('niveis', 'categorias'));
     }
 
     /**
@@ -35,7 +35,7 @@ class CursoController extends Controller
     public function store(CursoRequest $request)
     {
         Curso::create($request->validated());
-        return redirect()->route('cursos.index')->with('success', 'Curso criado com sucesso!');
+        return redirect()->route('coordenador.cursos.index')->with('success', 'Curso criado com sucesso!');
     }
 
     /**
@@ -62,7 +62,7 @@ class CursoController extends Controller
     public function update(CursoRequest $request, Curso $curso)
     {
         $curso->update($request->validated());
-        return redirect()->route('cursos.index')->with('success', 'Curso atualizado com sucesso!');
+        return redirect()->route('coordenador.cursos.index')->with('success', 'Curso atualizado com sucesso!');
     }
 
     /**
@@ -71,6 +71,6 @@ class CursoController extends Controller
     public function destroy(Curso $curso)
     {
         $curso->delete();
-        return redirect()->route('cursos.index')->with('success', 'Curso deletado com sucesso!');
+        return redirect()->route('coordenador.cursos.index')->with('success', 'Curso deletado com sucesso!');
     }
 }

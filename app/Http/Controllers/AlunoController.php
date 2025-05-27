@@ -44,7 +44,7 @@ class AlunoController extends Controller
         'senha' => bcrypt($request->senha),
         'curso_id' => $request->curso_id,
         'turma_id' => $request->turma_id,]);
-        return redirect()->route('alunos.index')->with('success', 'Aluno criado com sucesso!');
+        return redirect()->route('coordenador.alunos.index')->with('success', 'Aluno criado com sucesso!');
     }
 
     /**
@@ -79,7 +79,7 @@ class AlunoController extends Controller
             unset($data['senha']);
         }
         $aluno->update($data);
-        return redirect()->route('alunos.index')->with('success', 'Aluno atualizado com sucesso!');
+        return redirect()->route('coordenador.alunos.index')->with('success', 'Aluno atualizado com sucesso!');
     }
 
     /**
@@ -88,7 +88,7 @@ class AlunoController extends Controller
     public function destroy(Aluno $aluno)
     {
         $aluno->delete();
-        return redirect()->route('alunos.index')->with('success', 'Aluno excluído com sucesso!');
+        return redirect()->route('coordenador.alunos.index')->with('success', 'Aluno excluído com sucesso!');
     }
 
     

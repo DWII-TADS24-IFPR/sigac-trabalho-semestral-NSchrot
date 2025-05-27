@@ -7,28 +7,28 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('alunos.index') }}">Alunos</a>
+                    <a class="nav-link" href="{{ route('coordenador.alunos.index') }}">Alunos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('categorias.index') }}">Categorias</a>
+                    <a class="nav-link" href="{{ route('coordenador.categorias.index') }}">Categorias</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('comprovantes.index') }}">Comprovantes</a>
+                    <a class="nav-link" href="{{ route('coordenador.comprovantes.index') }}">Comprovantes</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('cursos.index') }}">Cursos</a>
+                    <a class="nav-link" href="{{ route('coordenador.cursos.index') }}">Cursos</a>
                 </li>
                  <li class="nav-item">
-                    <a class="nav-link" href="{{ route('declaracoes.index') }}">Declarações</a>
+                    <a class="nav-link" href="{{ route('coordenador.declaracoes.index') }}">Declarações</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('documentos.index') }}">Documentos</a>
+                    <a class="nav-link" href="{{ route('coordenador.documentos.index') }}">Documentos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('niveis.index') }}">Niveis</a>
+                    <a class="nav-link" href="{{ route('coordenador.niveis.index') }}">Niveis</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('turmas.index') }}">Turmas</a>
+                    <a class="nav-link" href="{{ route('coordenador.turmas.index') }}">Turmas</a>
                 </li>
             </ul>
         </div>

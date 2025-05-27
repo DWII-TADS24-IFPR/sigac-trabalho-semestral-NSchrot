@@ -34,7 +34,7 @@ class TurmaController extends Controller
     public function store(TurmaRequest $request)
     {
         Turma::create($request->validated());
-        return redirect()->route('turmas.index')->with('success', 'Turma criada com sucesso!');
+        return redirect()->route('coordenador.turmas.index')->with('success', 'Turma criada com sucesso!');
     }
 
     /**
@@ -60,7 +60,7 @@ class TurmaController extends Controller
     public function update(TurmaRequest $request, Turma $turma)
     {
         $turma->update($request->validated());
-        return redirect()->route('turmas.index')->with('success', 'Turma atualizada com sucesso!');
+        return redirect()->route('coordenador.turmas.index')->with('success', 'Turma atualizada com sucesso!');
     }
 
     /**
@@ -69,6 +69,6 @@ class TurmaController extends Controller
     public function destroy(Turma $turma)
     {
         $turma->delete();
-        return redirect()->route('turmas.index')->with('success', 'Turma excluída com sucesso!');
+        return redirect()->route('coordenador.turmas.index')->with('success', 'Turma excluída com sucesso!');
     }
 }

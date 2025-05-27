@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
         $this->call(AlunoSeeder::class);
         $this->call(ComprovanteSeeder::class);
         $this->call(DeclaracaoSeeder::class);
+        $this->call(RoleSeeder::class);
    
 
 

@@ -35,7 +35,7 @@ class DeclaracaoController extends Controller
     public function store(DeclaracaoRequest $request)
     {
         Declaracao::create($request->validated());
-        return redirect()->route('declaracoes.index')->with('success', 'Declaração criada com sucesso!');
+        return redirect()->route('coordenador.declaracoes.index')->with('success', 'Declaração criada com sucesso!');
     }
 
     /**
@@ -64,7 +64,7 @@ class DeclaracaoController extends Controller
     public function update(DeclaracaoRequest $request, Declaracao $declaracao)
     {
         $declaracao->update($request->validated());
-        return redirect()->route('declaracoes.index')->with('success', 'Declaração atualizada com sucesso!');
+        return redirect()->route('coordenador.declaracoes.index')->with('success', 'Declaração atualizada com sucesso!');
     }
 
     /**
@@ -73,6 +73,6 @@ class DeclaracaoController extends Controller
     public function destroy(Declaracao $declaracao)
     {
         $declaracao->delete();
-        return redirect()->route('declaracoes.index')->with('success', 'Declaração excluída com sucesso!');
+        return redirect()->route('coordenador.declaracoes.index')->with('success', 'Declaração excluída com sucesso!');
     }
 }

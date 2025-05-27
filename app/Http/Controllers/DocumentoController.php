@@ -34,7 +34,7 @@ class DocumentoController extends Controller
     public function store(DocumentoRequest $request)
     {
         Documento::create($request->validated());
-        return redirect()->route('documentos.index')->with('success', 'Documento criado com sucesso!');
+        return redirect()->route('coordenador.documentos.index')->with('success', 'Documento criado com sucesso!');
     }
 
     /**
@@ -60,7 +60,7 @@ class DocumentoController extends Controller
     public function update(DocumentoRequest $request, Documento $documento)
     {
         $documento->update($request->validated());
-        return redirect()->route('documentos.index')->with('success', 'Documento atualizado com sucesso!');
+        return redirect()->route('coordenador.documentos.index')->with('success', 'Documento atualizado com sucesso!');
     }
 
     /**
@@ -69,6 +69,6 @@ class DocumentoController extends Controller
     public function destroy(Documento $documento)
     {
         $documento->delete();
-        return redirect()->route('documentos.index')->with('success', 'Documento excluído com sucesso!');
+        return redirect()->route('coordenador.documentos.index')->with('success', 'Documento excluído com sucesso!');
     }
 }
