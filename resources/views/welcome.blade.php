@@ -19,6 +19,9 @@
                     <a href="{{ url('/dashboard') }}" class="px-6 py-2 rounded-full border-2 border-blue-200 dark:border-blue-700 text-blue-800 dark:text-blue-100 font-semibold hover:bg-blue-700 hover:text-white dark:hover:bg-blue-500 transition">Dashboard</a>
                 @else
                     <a href="{{ route('login') }}" class="px-6 py-2 rounded-full border-2 border-blue-200 dark:border-blue-700 text-blue-800 dark:text-blue-100 font-semibold hover:bg-blue-700 hover:text-white dark:hover:bg-blue-500 transition">Entrar</a>
+                    @if (Route::has('register'))
+                        <a href="{{ route('register') }}" class="px-6 py-2 rounded-full border-2 border-blue-700 text-blue-700 dark:text-blue-200 font-semibold hover:bg-blue-50 dark:bg-blue-950 dark:hover:bg-blue-900 transition">Registrar</a>
+                    @endif
                 @endauth
             </nav>
         @endif
@@ -28,7 +31,7 @@
             <h1 class="text-4xl lg:text-6xl font-black mb-6 text-blue-900 dark:text-blue-200 leading-tight drop-shadow">Sua vida acadêmica mais organizada</h1>
             <p class="text-lg text-blue-900/80 dark:text-blue-100/80 mb-8">O SIGAC é o sistema ideal para gerenciar, acompanhar e validar suas atividades complementares universitárias. Simples, rápido e eficiente para alunos e coordenadores.</p>
             @if (Route::has('login'))
-                <a href="{{ route('login') }}" class="inline-block px-10 py-3 bg-blue-700 dark:bg-blue-500 text-white font-bold rounded-full shadow-lg hover:bg-blue-900 dark:hover:bg-blue-700 transition text-xl">Acessar o sistema</a>
+                <a href="{{ route('login') }}" class="inline-block px-8 py-3 bg-blue-700 dark:bg-blue-500 text-white font-semibold rounded shadow hover:bg-blue-900 dark:hover:bg-blue-700 transition text-lg">Acessar o sistema</a>
             @endif
         </section>
         <aside class="w-full max-w-md flex items-center justify-center">

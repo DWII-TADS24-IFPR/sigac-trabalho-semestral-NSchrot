@@ -14,6 +14,7 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $this->call(NivelSeeder::class); 
+        $this->call(EixoSeeder::class);
         $this->call(CursoSeeder::class); 
         $this->call(CategoriaSeeder::class);
         $this->call(DocumentoSeeder::class);
@@ -22,6 +23,7 @@ class DatabaseSeeder extends Seeder
         $this->call(ComprovanteSeeder::class);
         $this->call(DeclaracaoSeeder::class);
         $this->call(RoleSeeder::class);
+  
    
 
 

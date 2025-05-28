@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Curso;
 use App\Models\Nivel;
 use App\Models\Categoria;
+use App\Models\Eixo;
 use App\Http\Requests\CursoRequest;
 use Illuminate\Http\Request;
 
@@ -26,7 +27,8 @@ class CursoController extends Controller
     {
         $niveis = Nivel::all();
         $categorias = Categoria::all();
-        return view('coordenador.curso.create', compact('niveis', 'categorias'));
+        $eixos = Eixo::all();
+        return view('curso.create', compact('niveis', 'categorias', 'eixos'));
     }
 
     /**
@@ -53,7 +55,8 @@ class CursoController extends Controller
     {
         $niveis = Nivel::all();
         $categorias = Categoria::all();
-        return view('curso.edit', compact('curso', 'niveis', 'categorias'));
+        $eixos = Eixo::all();
+        return view('curso.edit', compact('curso', 'niveis', 'categorias', 'eixos'));
     }
 
     /**

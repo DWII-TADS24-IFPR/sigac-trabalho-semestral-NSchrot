@@ -17,6 +17,7 @@
                         <a href="{{ route('coordenador.cursos.index') }}" class="block p-4 bg-indigo-600 text-white rounded shadow hover:bg-indigo-700 transition">Gerenciar Cursos</a>
                         <a href="{{ route('coordenador.declaracoes.index') }}" class="block p-4 bg-indigo-600 text-white rounded shadow hover:bg-indigo-700 transition">Gerenciar Declarações</a>
                         <a href="{{ route('coordenador.documentos.index') }}" class="block p-4 bg-indigo-600 text-white rounded shadow hover:bg-indigo-700 transition">Gerenciar Documentos</a>
+                        <a href="{{ route('coordenador.eixos.index') }}" class="block p-4 bg-indigo-600 text-white rounded shadow hover:bg-indigo-700 transition">Gerenciar Eixos</a>
                         <a href="{{ route('coordenador.niveis.index') }}" class="block p-4 bg-indigo-600 text-white rounded shadow hover:bg-indigo-700 transition">Gerenciar Níveis</a>
                         <a href="{{ route('coordenador.turmas.index') }}" class="block p-4 bg-indigo-600 text-white rounded shadow hover:bg-indigo-700 transition">Gerenciar Turmas</a>
                     </div>

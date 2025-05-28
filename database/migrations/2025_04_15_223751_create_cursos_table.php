@@ -18,7 +18,6 @@ return new class extends Migration
             $table->integer('total_horas');
             $table->unsignedBigInteger('nivel_id');
             $table->foreign('nivel_id')->references('id')->on('niveis')->onDelete('cascade');
-            $table->integer('eixo_id')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

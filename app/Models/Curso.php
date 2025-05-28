@@ -34,4 +34,8 @@ class Curso extends Model
     {
         return $this->hasMany(Turma::class);
     }
+    public function eixo()
+    {
+        return $this->belongsTo(Eixo::class);
+    }
 }

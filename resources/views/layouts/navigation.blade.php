@@ -45,6 +45,9 @@
                             <x-nav-link :href="route('coordenador.categorias.index')">
                                 {{ __('Categorias') }}
                             </x-nav-link>
+                            <x-nav-link :href="route('coordenador.eixos.index')">
+                                {{ __('Eixos') }}
+                            </x-nav-link>
                         @endif
                     @endif
                 </div>
@@ -131,6 +134,9 @@
                     </x-responsive-nav-link>
                     <x-responsive-nav-link :href="route('coordenador.categorias.index')">
                         {{ __('Categorias') }}
+                    </x-responsive-nav-link>
+                    <x-responsive-nav-link :href="route('coordenador.eixos.index')">
+                        {{ __('Eixos') }}
                     </x-responsive-nav-link>
                 @endif
             @endif

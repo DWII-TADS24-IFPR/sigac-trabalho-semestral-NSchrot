@@ -37,6 +37,15 @@
                                 @endforeach
                             </select>
                         </div>
+                        <div>
+                            <label for="eixo_id" class="block text-sm font-medium">Eixo</label>
+                            <select name="eixo_id" id="eixo_id" class="mt-1 block w-full rounded border-gray-300 dark:bg-gray-700 dark:text-gray-100">
+                                <option value="">Selecione um eixo</option>
+                                @foreach ($eixos as $eixo)
+                                    <option value="{{ $eixo->id }}" {{ (old('eixo_id', $curso->eixo_id) == $eixo->id) ? 'selected' : '' }}>{{ $eixo->nome }}</option>
+                                @endforeach
+                            </select>
+                        </div>
                         <div class="flex gap-2">
                             <button type="submit" class="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700">Atualizar</button>
                             <a href="{{ route('coordenador.cursos.index') }}" class="px-4 py-2 bg-gray-400 text-white rounded hover:bg-gray-500">Cancelar</a>

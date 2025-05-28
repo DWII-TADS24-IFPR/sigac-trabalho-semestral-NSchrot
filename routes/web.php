@@ -11,6 +11,7 @@ use App\Http\Controllers\TurmaController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AlunoDashboardController; 
 use App\Http\Controllers\CoordenadorDashboardController;
+use App\Http\Controllers\EixoController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -57,6 +58,7 @@ Route::middleware(['auth', 'verified', 'role:coordenador'])->prefix('coordenador
     Route::resource('niveis', NivelController::class)->parameters(['niveis' => 'nivel']);
 
     Route::resource('turmas', TurmaController::class);
+    Route::resource('eixos', EixoController::class);
 
     Route::put('/alunos/{aluno}', [AlunoController::class, 'update'])->name('alunos.update');
     Route::get('/turmas/get/{cursoId}', [AlunoController::class, 'getTurmasByCurso'])->name('turmas.byCurso');

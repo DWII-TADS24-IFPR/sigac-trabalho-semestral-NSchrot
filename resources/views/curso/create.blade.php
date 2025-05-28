@@ -54,12 +54,14 @@
                             @enderror
                         </div>
 
-                        <div class="mb-3">
-                            <label for="eixo_id" class="form-label">Eixo</label>
-                            <input type="number" class="form-control" id="eixo_id" name="eixo_id" value="{{ old('eixo_id') }}">
-                            @error('eixo_id')
-                                <div class="text-danger">{{ $message }}</div>
-                            @enderror
+                        <div>
+                            <label for="eixo_id" class="block text-sm font-medium">Eixo</label>
+                            <select name="eixo_id" id="eixo_id" class="mt-1 block w-full rounded border-gray-300 dark:bg-gray-700 dark:text-gray-100">
+                                <option value="">Selecione um eixo</option>
+                                @foreach ($eixos as $eixo)
+                                    <option value="{{ $eixo->id }}" {{ old('eixo_id') == $eixo->id ? 'selected' : '' }}>{{ $eixo->nome }}</option>
+                                @endforeach
+                            </select>
                         </div>
 
                         <div class="flex gap-2">
